@@ -1,12 +1,22 @@
+// Copyright 2024 Yuriy Nazarov
+
+#ifndef INCLUDE_AUTOMATA_H_
+#define INCLUDE_AUTOMATA_H_
+#endif
+
 #include<string>
 #include <map>
 
 enum class STATES {
-	OFF, WAIT, ACCEPT, CHECK, COOK
+	OFF, 
+	WAIT, 
+	ACCEPT, 
+	CHECK, 
+	COOK
 };
 
 class Automata {
-private:
+ private:
 	float cash;
 	std::map<std::string, int> menu;;
 	STATES state;
@@ -14,7 +24,7 @@ private:
 	void cook(std::string);
 	void finish();
 
-public:
+ public:
 	Automata();
 	~Automata();
 	void on();

@@ -1,3 +1,5 @@
+// Copyright 2024 Yuriy Nazarov
+
 #include "Automata.h"
 #include <iostream>
 

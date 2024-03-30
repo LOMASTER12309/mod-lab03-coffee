@@ -1,3 +1,5 @@
+// Copyright 2024 Yuriy Nazarov
+
 #include<iostream>
 #include "Automata.h"
 
@@ -18,8 +20,9 @@ Automata::Automata() {
 Automata::~Automata() {}
 
 void Automata::on() {
-	if (state == STATES::OFF)
+	if (state == STATES::OFF) {
 		state = STATES::WAIT;
+	}
 }
 
 void Automata::off() {
@@ -43,9 +46,11 @@ void Automata::coin(int DepMoney) {
 
 void Automata::check(std::string DrinkName) {
 	if (state == STATES::CHECK) {
-		if (menu[DrinkName] <= cash)
+		if (menu[DrinkName] <= cash) {
 			cook(DrinkName);
-		else cancel();
+		} else {
+			cancel();
+		}
 	}
 }
 
@@ -66,8 +71,9 @@ void Automata::cook(std::string DrinkName) {
 
 void Automata::finish()
 {
-	if (state == STATES::COOK)
+	if (state == STATES::COOK) {
 		state = STATES::WAIT;
+	}
 }
 
 void Automata::cancel() {
