@@ -8,23 +8,23 @@
 #include <map>
 
 enum class STATES {
-	OFF, 
-	WAIT, 
-	ACCEPT, 
-	CHECK, 
-	COOK
+    OFF,
+    WAIT,
+    ACCEPT,
+    CHECK,
+    COOK
 };
 
 class Automata {
-private:
+ private:
     float cash;
-    std::map<std::string, int> menu;;
+    std::map<std::string, int> menu;
     STATES state;
     void check(std::string);
     void cook(std::string);
     void finish();
 
-public:
+ public:
     Automata();
     ~Automata();
     void on();
