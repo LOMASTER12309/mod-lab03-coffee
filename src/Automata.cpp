@@ -23,8 +23,10 @@ void Automata::on() {
 }
 
 void Automata::off() {
-	if (state == STATES::WAIT)
+	if (state == STATES::WAIT) {
+		cash = 0;
 		state = STATES::OFF;
+	}
 }
 
 void Automata::coin(int DepMoney) {
@@ -58,6 +60,7 @@ void Automata::cook(std::string DrinkName) {
 	if (state == STATES::CHECK) {
 		cash -= menu[DrinkName];
 		state = STATES::COOK;
+		finish();
 	}
 }
 

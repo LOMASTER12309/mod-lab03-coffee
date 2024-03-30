@@ -1,7 +1,6 @@
-#ifndef INCLUDE_AUTOMATA_H_
-#define INCLUDE_AUTOMATA_H_
 #include<string>
 #include <map>
+
 enum class STATES {
 	OFF, WAIT, ACCEPT, CHECK, COOK
 };
@@ -27,4 +26,3 @@ public:
 	void cancel();
 	int getBalance();
 };
-#endif
