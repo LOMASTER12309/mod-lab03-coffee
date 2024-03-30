@@ -2,7 +2,7 @@
 
 #ifndef INCLUDE_AUTOMATA_H_
 #define INCLUDE_AUTOMATA_H_
-#endif
+#endif //INCLUDE_AUTOMATA_H_
 
 #include<string>
 #include <map>
