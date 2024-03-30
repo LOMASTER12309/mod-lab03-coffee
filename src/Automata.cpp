@@ -48,7 +48,8 @@ void Automata::check(std::string DrinkName) {
     if (state == STATES::CHECK) {
         if (menu[DrinkName] <= cash) {
             cook(DrinkName);
-        } else {
+        }
+        else {
             cancel();
         }
     }
@@ -89,7 +90,7 @@ int Automata::getBalance()
 
 void Automata::getMenu() {
     for (const auto& [drink, price] : menu)
-        std::cout << drink << " - " << price << " руб.\n";
+        std::cout << drink << " - " << price << "\n";
 }
 
 STATES Automata::getState() {
